@@ -27,7 +27,7 @@ count=more
 
 # 'C' Conflicted
 regexp=^C
-colours=bold cyan
+colours=bold "\033[38;5;172m"
 count=more
 
 =======
