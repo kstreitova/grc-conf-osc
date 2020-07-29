@@ -5,77 +5,60 @@
 # Source: https://github.com/kstreitova/grc-conf-osc
 # License: GPL-2.0+
 #
-# Possible characters
-#   '' no modifications
-#   'A' Added
-#   'C' Conflicted
-#   'D' Deleted
-#   'M' Modified
-#   'R' Replaced (file was deleted and added again afterwards)
-#   '?' item is not under version control
-#   '!' item is missing (removed by non-osc command) or incomplete
-#   'S' item is skipped (item exceeds a file size limit or is _service:* file)
-#   'F' Frozen (use "osc pull" to merge conflicts) (package-only state)
-
 
 # 'A' Added
-regexp=^A
+regexp=^A\s+
 colours=bold green
 count=more
 
 =======
 
 # 'C' Conflicted
-regexp=^C
+regexp=^C\s+
+# orange-ish
 colours=bold "\033[38;5;172m"
 count=more
 
 =======
 
 ## 'D' Deleted
-regexp=^D
+regexp=^D\s+
 colours=bold red
 count=more
 
 =======
 
 # 'M' Modified
-regexp=^M
+regexp=^M\s+
 colours=bold yellow
 count=more
 
 =======
 
 # 'R' Replaced (file was deleted and added again afterwards)
-regexp=^R
-colours=bold blue
-count=more
-
-=======
-
-# '?' item is not under version control
-regexp=^\?
-colours=bold blue
+regexp=^R\s+
+# dark blue-ish
+colours=bold "\033[38;5;25m"
 count=more
 
 =======
 
 # '!' item is missing (removed by non-osc command) or incomplete
-regexp=^\!
-colours=bold on_red
+regexp=^(\!)\s+
+colours=default,bold on_red
 count=more
 
 =======
 
 # 'S' item is skipped (item exceeds a file size limit or is _service:* file)
-regexp=^S
+regexp=^S\s+
 colours=bold blue
 count=more
 
 =======
 
 # 'F' Frozen (use "osc pull" to merge conflicts) (package-only state)
-regexp=^F
+regexp=^F\s+
 colours=bold blue
 count=more
 
