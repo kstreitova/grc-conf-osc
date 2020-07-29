@@ -1,0 +1,98 @@
+#
+# The following config file is designed for 'osc update' command.
+#
+# Author: Kristyna Streitova (kstreitova@suse.com)
+# Source: https://github.com/kstreitova/grc-conf-osc
+# License: GPL-2.0+
+#
+
+# 'A' Added
+regexp=^A\s+
+colours=bold green
+count=more
+
+=======
+
+# 'C' Conflicted
+regexp=^C\s+
+# orange-ish
+colours=bold "\033[38;5;172m"
+count=more
+
+=======
+
+## 'D' Deleted
+regexp=^D\s+
+colours=bold red
+count=more
+
+=======
+
+# 'U' Updated
+regexp=^U\s+
+# green-blue-ish
+colours=bold "\033[38;5;73m"
+count=more
+
+=======
+
+# 'G' ??? 
+regexp=^G\s+
+# pink-ish
+colours=bold "\033[38;5;211m"
+count=more
+
+=======
+
+# Skipping
+regexp=^skipping
+# orange-ish
+colours="\033[38;5;172m"
+count=more
+
+=======
+
+# Pending requests
+regexp=^Pending requests
+# yellow-ish
+colours=bold "\033[38;5;29m"
+count=more
+
+=======
+
+# Request number
+regexp=^\d{6,}
+colours=green
+count=more
+
+=======
+
+# Request state - new
+regexp=(^\d{6,})\s*State:(new)\s*By:(\S*)
+# 29=green-blue-ish
+colours=default, bold "\033[38;5;29m", green, "\033[38;5;29m"
+count=more
+
+=======
+
+# Request state - review
+regexp=(^\d{6,})\s*State:(review)\s*By:(\S*)
+colours=default, bold "\033[38;5;29m", blue, "\033[38;5;29m"
+count=more
+
+=======
+
+# Error - package not found
+regexp=^Server returned an error.*$
+colours=bold red
+count=more
+
+=======
+
+# Failed
+regexp=^failed
+colours=bold red
+count=more
+
+=======
+
