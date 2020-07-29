@@ -5,3 +5,4 @@ Currently the following commands are supported:
 
 - `osc status`
 - `osc update`
+- `osc maintainer`

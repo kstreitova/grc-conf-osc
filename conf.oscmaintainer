@@ -1,0 +1,16 @@
+#
+# The following config dile is designed for 'osc maintainer' command.
+#
+# Author: Kristyna Streitova (kstreitova@suse.com)
+# Source: https://github.com/kstreitova/grc-conf-osc
+# License: GPL-2.0+
+#
+
+regexp=bugowner|maintainer
+colours=green
+count=more
+
+=======
+
+regexp=^Defined in package:\s(.*)
+colours=default,cyan
