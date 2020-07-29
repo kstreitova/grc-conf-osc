@@ -1,0 +1,22 @@
+#
+# The following config file is designed for 'osc log' command.
+#
+# Author: Kristyna Streitova (kstreitova@suse.com)
+# Source: https://github.com/kstreitova/grc-conf-osc
+# License: GPL-2.0+
+#
+
+# separator
+regexp=^---*
+colours=green
+count=more
+
+=======
+
+# revision number, author, date, hash, sth?
+regexp=^(r\d+)\s\|\s([^|]*)\s\|\s([^|]*)
+colours=default,magenta,blue,green
+count=more
+
+=======
+
